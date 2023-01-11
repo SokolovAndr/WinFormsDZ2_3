@@ -39,11 +39,11 @@
             this.n1 = new System.Windows.Forms.Button();
             this.n2 = new System.Windows.Forms.Button();
             this.n3 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.Plus = new System.Windows.Forms.Button();
             this.n0 = new System.Windows.Forms.Button();
             this.dot = new System.Windows.Forms.Button();
             this.equal = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
+            this.Minus = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.c = new System.Windows.Forms.Button();
             this.Warning = new System.Windows.Forms.Label();
@@ -164,15 +164,15 @@
             this.n3.UseVisualStyleBackColor = true;
             this.n3.Click += new System.EventHandler(this.n0_Click_1);
             // 
-            // button12
+            // Plus
             // 
-            this.button12.Location = new System.Drawing.Point(186, 130);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(47, 46);
-            this.button12.TabIndex = 11;
-            this.button12.Text = "+";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.action_Click);
+            this.Plus.Location = new System.Drawing.Point(186, 130);
+            this.Plus.Name = "Plus";
+            this.Plus.Size = new System.Drawing.Size(47, 46);
+            this.Plus.TabIndex = 11;
+            this.Plus.Text = "+";
+            this.Plus.UseVisualStyleBackColor = true;
+            this.Plus.Click += new System.EventHandler(this.action_Click);
             // 
             // n0
             // 
@@ -205,15 +205,15 @@
             this.equal.UseVisualStyleBackColor = false;
             this.equal.Click += new System.EventHandler(this.equal_Click);
             // 
-            // button16
+            // Minus
             // 
-            this.button16.Location = new System.Drawing.Point(186, 182);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(47, 46);
-            this.button16.TabIndex = 15;
-            this.button16.Text = "-";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.action_Click);
+            this.Minus.Location = new System.Drawing.Point(186, 182);
+            this.Minus.Name = "Minus";
+            this.Minus.Size = new System.Drawing.Size(47, 46);
+            this.Minus.TabIndex = 15;
+            this.Minus.Text = "-";
+            this.Minus.UseVisualStyleBackColor = true;
+            this.Minus.Click += new System.EventHandler(this.action_Click);
             // 
             // textBox1
             // 
@@ -300,11 +300,11 @@
             this.Controls.Add(this.Warning);
             this.Controls.Add(this.c);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button16);
+            this.Controls.Add(this.Minus);
             this.Controls.Add(this.equal);
             this.Controls.Add(this.dot);
             this.Controls.Add(this.n0);
-            this.Controls.Add(this.button12);
+            this.Controls.Add(this.Plus);
             this.Controls.Add(this.n3);
             this.Controls.Add(this.n2);
             this.Controls.Add(this.n1);
@@ -340,11 +340,11 @@
         private Button n1;
         private Button n2;
         private Button n3;
-        private Button button12;
+        private Button Plus;
         private Button n0;
         private Button dot;
         private Button equal;
-        private Button button16;
+        private Button Minus;
         private TextBox textBox1;
         private Button c;
         private Label Warning;

@@ -14,7 +14,7 @@ namespace WinFormsDZ2__2
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            Button[] btns = new Button[] { n0, n1, n2, n3, n4, n5, n6, n7, n8, n9, c, Sqrt, x2, PlusMinus, div, multiplic, button12, dot, equal, button16 };
+            Button[] btns = new Button[] { n0, n1, n2, n3, n4, n5, n6, n7, n8, n9, c, Sqrt, x2, PlusMinus, div, multiplic, Plus, dot, equal, Minus };
             List<Button> list = btns.ToList();
             var numbersCopy = new List<Button>(list);
 
