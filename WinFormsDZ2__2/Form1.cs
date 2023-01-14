@@ -1,41 +1,72 @@
+using System.Linq;
+using Timer = System.Windows.Forms.Timer;
+
 namespace WinFormsDZ2__2
 {
     public partial class Form1 : Form
     {
+        Timer Timer;
         private string D;
         private string N1;
         private bool N2;
 
         public Form1()
         {
-            N2 = false;
+            N2 = false;            
             InitializeComponent();
         }
 
+
+
+
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            Button[] btns = new Button[] { n0, n1, n2, n3, n4, n5, n6, n7, n8, n9, c, Sqrt, x2, PlusMinus, div, multiplic, Plus, dot, equal, Minus };
-            List<Button> list = btns.ToList();
+            //Button[] btns = new Button[] { n0, n1, n2, n3, n4, n5, n6, n7, n8, n9, c, Sqrt, x2, PlusMinus, div, multiplic, Plus, dot, equal, Minus };
+            
+            List<Button> list = new();
+            foreach (var btn in this.Controls)
+            {
+                if(btn is Button b)
+                {
+                    list.Add(b);
+                }
+            }
             var numbersCopy = new List<Button>(list);
-
+            Random random = new Random();
+            if (Timer != null)
+                Timer.Stop();
             if (e.KeyCode == Keys.Enter)
             {
-                for (int i = 0; i < btns.Length; i++)
-                {
-                    btns[i].Visible = false;
-                    Thread.Sleep(10);
-                }
-                Warning.Visible = false;
-                Solving.Visible = true;
+                //for (int i = 0; i < btns.Length; i++)
+                //{
+                //    btns[i].Visible = false;
+                //    Thread.Sleep(10);
+                //}
+                //Warning.Visible = false;
+                //Solving.Visible = true;
+                
+                Timer = new Timer();
+                Timer.Interval = 500;
+                Timer.Tick += (s,e)=> {
+                    list[random.Next(0, list.Count)].Visible = false;
+                
+                };
+                Timer.Start();
+
             }
             if (e.KeyCode == Keys.Escape)
             {
-                for (int i = 0; i < btns.Length; i++)
+                //for (int i = 0; i < btns.Length; i++)
+                //{
+                //    btns[i].Visible = true;
+                //}
+                //Warning.Visible = true;
+                //Solving.Visible = false;
+                var bt = list.Where(u => u.Visible == false);
+                foreach(var b in bt)
                 {
-                    btns[i].Visible = true;
+                    b.Visible = true;
                 }
-                Warning.Visible = true;
-                Solving.Visible = false;
             }
         }
         
